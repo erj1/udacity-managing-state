@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Score from "./Score";
 
 class App extends Component {
 
@@ -52,9 +53,7 @@ class App extends Component {
           </div>
           <button onClick={() => this.checkAnswer(true)}>True</button>
           <button onClick={() => this.checkAnswer(false)}>False</button>
-          <p className="text">
-            Your Score: {this.state.numCorrect}/{this.state.numQuestions}
-          </p>
+          <Score correct={this.state.numCorrect} questions={this.state.numQuestions} />
         </div>
       </div>
     );
